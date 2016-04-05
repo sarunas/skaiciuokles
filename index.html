@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Taškų skaičiavimas</title>
+		
+		<script type="text/javascript">
+			function calculate() {
+				var p = document.getElementById('f-place').value;
+				var s = document.getElementById('f-sum').value;
+				var d = document.getElementById('f-distance').value;
+				
+				document.getElementById('f-result').value = (20-p/s*100)+d/10;
+			}
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Parametras</th>
+					<th>Reikšmė</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>Balandžio vieta</td>
+					<td><input id="f-place" type="text" value=""></td>
+				</tr>
+				<tr>
+					<td>Balandžių suma etape</td>
+					<td><input id="f-sum" type="text" value=""></td>
+				</tr>
+				<tr>
+					<td>Bazinė distancija</td>
+					<td><input id="f-distance" type="text" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" value="Skaičiuoti" onclick="calculate();"></td>
+				</tr>
+				<tr>
+					<td>Rezultatas</td>
+					<td><input id="f-result" type="text" value=""></td>
+				</tr>
+			</tbody>
+			
+		</table>	
+	</body>
+</html>
